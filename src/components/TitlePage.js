@@ -9,18 +9,18 @@ import {
 export default class TitlePage extends Component {
 	render() {
 		return (
-			<Image source={require('../assets/images/game-controller-icon.jpg')} />
+			<Image source={ require('../assets/images/game-controller-icon.jpg') } />
 		);
 	}
 };
 
-// const styles = StyleSheet.create({
-//   image : {
-// 	justifyContent: 'center',
-//     resizeMode: 'cover',
-//     flex: 1,
-//     width: null,
-//     height: null
-//   }
-// });
+const styles = StyleSheet.create({
+  image : {
+	justifyContent: 'center',
+    resizeMode: 'cover',
+    flex: 1,
+    width: null,
+    height: null
+  }
+});
 

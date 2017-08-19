@@ -10,7 +10,9 @@ describe('Given a Title page', () => {
 
     describe('when rendered', () => {
         before(() => component = shallow(<TitlePage />));
+
         it('should show an image of a game controller', () => {
+            console.log(component.debug());
             expect(component.find(Image)).to.have.length(1);
         });
     });

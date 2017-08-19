@@ -1,8 +1,7 @@
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading } from 'expo';
-import { FontAwesome } from '@expo/vector-icons';
-import RootNavigation from './navigation/RootNavigation';
+import RootNavigation from './src/navigation/RootNavigation';
 
 import cacheAssetsAsync from './utilities/cacheAssetsAsync';
 
@@ -18,12 +17,7 @@ export default class AppContainer extends React.Component {
   async _loadAssetsAsync() {
     try {
       await cacheAssetsAsync({
-        images: [require('./assets/images/expo-wordmark.png')],
-        fonts: [
-          FontAwesome.font,
-          { 'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf') },
-        ],
-      });
+        images: [require('./src/assets/images/expo-wordmark.png')]});
     } catch (e) {
       console.warn(
         'There was an error caching assets (see: main.js), perhaps due to a ' +
